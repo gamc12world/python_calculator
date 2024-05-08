@@ -8,7 +8,7 @@ def _calculator(operator:str,x1:list):
       mul=1
       sub=0
       div=1
-      for i in x1:
+      """for i in x1:
          match operator:
                case '+':
                   add=i+add
@@ -19,9 +19,12 @@ def _calculator(operator:str,x1:list):
                case "/":
                   div=i/div
                case _:
-                  print("nothing matched up")
+                  print("nothing matched up") """
       match operator:
          case "+":
+            while True:
+               
+               pass
             rich.get_console().print(f"[bold underline green]{add}[/bold underline green]")
          case "-":
             rich.get_console().print(f"[bold white]{sub}[/bold white]")
