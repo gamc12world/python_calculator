@@ -13,9 +13,6 @@ detail_file=open("detail.txt","w")
 def submit():
     tkinter.messagebox.askyesno("hello")
     c2=name_entery.get()
-    detail.add(c2)
-    detail_file.write(str(c2))
-    
     pass
 name_entery.grid(row=0,column=1)
 submit_button=Button(root,text="submit",command=submit)
