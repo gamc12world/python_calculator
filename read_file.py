@@ -1,14 +1,12 @@
 class Solution(object):
-    def searchInsert(self, nums, target):
-        nums.sort()
-        x1=[num for num in nums]
-        if target in x1:
-                return print(x1.index(target)) 
+    def searchRange(self, nums, target):
+        if target in nums:
+             for i in range(len(nums)):
+                   if target == nums[i]:
+                        return [i,i]
+                   elif target < nums[i]:
+                        return [nums.index(target),nums.index(target)+1]
         else:
-            nums.append(target)
-            nums.sort()
-            x4=[num for num in nums]
-            if target in x4:
-                return print(x4.index(target))
-
-Solution().searchInsert([1,3,5,6],5)
+                return ([-1,-1])
+            
+print(Solution().searchRange([1,2,3],2))
